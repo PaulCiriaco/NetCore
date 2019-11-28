@@ -1,21 +1,21 @@
-name: .NET Core
+name: .NET Core	
 
-on: [push]
+on: [push]	
 
-jobs:
-  build:
+jobs:	
+  build:	
 
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-latest	
 
-    steps:
-    - uses: actions/checkout@v1
-    - name: Setup .NET Core
-      uses: actions/setup-dotnet@v1
-      with:
-        dotnet-version: 3.0.101
-    - name: Build with dotnet
-      run: dotnet restore --configuration Release
-    - name: Build with dotnet
-      run: dotnet build --configuration Release
-    - name: Build with dotnet
-      run: dotnet test --configuration Release
+    steps:	
+    - uses: actions/checkout@v1	
+    - name: Setup .NET Core	
+      uses: actions/setup-dotnet@v1	
+      with:	
+        dotnet-version: 3.0.101	
+    - name: Restore con dotnet	
+      run: dotnet restore 	
+    - name: Build con dotnet	
+      run: dotnet build 	
+    - name: Test con dotnet	
+      run: dotnet test 
